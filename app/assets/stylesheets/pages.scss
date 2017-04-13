@@ -3,7 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 nav{
-	background-color: #11c66e !important;
+	background-color: rgba(17, 198, 110, 0) !important;
+	border: 0px !important;
+	opacity: 0.2;
+	height: 80px;
+}
+
+.nav-anim {
+	-webkit-animation-name: switch; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: switch;
+    animation-duration: 1s;
 }
 
 #capture-wrapper{
@@ -19,7 +29,7 @@ nav{
 .kalipay-wallpaper{
 	display: none;
 	position: relative;
-	top: 80px;
+	top: 60px;
 }
 
 footer{

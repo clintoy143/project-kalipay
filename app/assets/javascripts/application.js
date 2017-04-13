@@ -20,3 +20,17 @@
 $(document).ready(function(){
 	$(".kalipay-wallpaper").delay(500).fadeIn(1000);
 });
+
+//nav-bar effects
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+
+		var h = $(window).scrollTop();
+
+		if(h > 10){
+			$("#nav").addClass('nav-anim');
+		}
+
+	});
+});

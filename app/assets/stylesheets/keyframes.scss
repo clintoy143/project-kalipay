@@ -1,0 +1,9 @@
+@keyframes switch {
+	from {background-color: rgba(17, 198, 110, 0) !important; height: 80px;}
+	to {background-color: rgba(17, 198, 110, 1) !important; height: 60px;}
+}
+
+@-webkit-keyframes example {
+	from {background-color: rgba(17, 198, 110, 0) !important; height: 80px;}
+	to {background-color: rgba(17, 198, 110, 1) !important; height: 60px;}
+}

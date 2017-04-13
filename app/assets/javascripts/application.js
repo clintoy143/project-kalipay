@@ -15,3 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+//FadeIn effect for capture screen
+$(document).ready(function(){
+	$(".kalipay-wallpaper").delay(500).fadeIn(1000);
+});

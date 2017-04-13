@@ -1,5 +1,9 @@
 <div id="blog-post-container">
-	<div class="post-heading">
-		<h2></h2>
-	</div>
+	<% @post.each do |post| %>
+		<div class="col-md-4">
+			<h2><%= post.heading %></h2>
+			<p><%= post.content %></p>
+			<%= link_to "read more . . .", article_path(:id=> post)%>
+		</div>
+	<%end%>
 </div>

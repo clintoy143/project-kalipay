@@ -1,3 +1,128 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+nav{
+	background-color: #11c66e !important;
+}
+
+#capture-wrapper{
+	border-bottom: 1px solid #caf4c8;
+	height: 400px;
+}
+
+#kalipay-capture {
+	height: 400px;
+	background: image_url('photography.png');
+}
+
+.kalipay-wallpaper{
+	display: none;
+	position: relative;
+	top: 80px;
+}
+
+footer{
+	height: 200px;
+	border-top: 2px solid #b8ceb7;
+}
+
+
+#footer-wrapper {
+	margin-top: 40px;
+}
+
+.footer-list>li{
+	list-style-type: none;
+	display: inline-block;
+	padding-right: 20px;
+}
+
+.kalipay-div-1{
+	height: 500px;
+}
+
+.kalipay-div-1>div:first-child {
+	height: inherit;
+	background: image_url("image_mason/kalipay-christmas.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+
+.kalipay-div-2, .kalipay-div-3{
+	height: 250px;
+
+}
+
+.kalipay-div-2>div:first-child{
+	height: inherit;
+	background: image_url("image_mason/kalipay-daghan.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	border-bottom: 1px solid white;	
+}
+
+.kalipay-div-2>div:last-child{
+	height: inherit;
+	background: image_url("image_mason/kalipay-crew.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	border-bottom: 1px solid white;	
+}
+
+.kalipay-div-3>div:first-child{
+	height: inherit;
+	background: image_url("image_mason/kalipay-claire-jolu.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;	
+}
+
+.kalipay-div-3>div:last-child{
+	height: inherit;
+	background: image_url("image_mason/kalipay-boys.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;	
+}
+
+.kalipay-div-4{
+	height: 400px;
+}
+
+.kalipay-div-4>div:first-child{
+	height: inherit;
+	background: image_url("image_mason/kalipay-bata.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;	
+}
+
+.kalipay-div-4>div:nth-child(2){
+	height: inherit;
+	background: image_url("image_mason/kalipay-xmas.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	border-right: 1px solid white;		
+}
+
+.kalipay-div-4>div:nth-child(3){
+	height: inherit;
+	background: image_url("image_mason/kalipay-tago.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	border-left: 1px solid white;		
+}
+
+.kalipay-div-4>div:last-child{
+	height: inherit;
+	background: image_url("image_mason/kalipay-dodong.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;	
+}

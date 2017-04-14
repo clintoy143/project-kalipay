@@ -1,0 +1,20 @@
+<section id="article-create">
+	<h2>Create new article ...</h2>
+	<%= form_for @post, url: admin_post_path do |post| %>
+		<div class="form-group">
+			<label>Author</label> <br />
+			<%= post.text_field :author, class:"form-control", :value=>"Kalipay" %>
+		</div>
+		<div class="form-group">
+			<label>Title</label> <br />
+			<%= post.text_field :heading, class:"form-control" %>
+		</div>
+		<div class="form-group">
+			<label>Content</label>	<br />
+			<%= post.text_area :content %>
+		</div>
+		<div class="form-group">
+			<%= post.submit "Create article ...", class:"btn btn-success"  %>
+		</div>	
+	<% end %>
+</section>

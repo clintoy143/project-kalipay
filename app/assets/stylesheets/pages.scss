@@ -2,11 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-nav{
-	background-color: rgba(17, 198, 110, 0) !important;
+nav{	
 	border: 0px !important;
-	opacity: 0.2;
-	height: 80px;
+}
+
+nav a {
+	color: white !important;
 }
 
 .nav-anim {
@@ -14,25 +15,29 @@ nav{
     -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
     animation-name: switch;
     animation-duration: 1s;
+    background-color: rgba(17, 198, 110, 1); 
+    height: 60px;
 }
 
 #capture-wrapper{
 	border-bottom: 1px solid #caf4c8;
-	height: 400px;
+	height: 530px;
 }
 
 #kalipay-capture {
-	height: 400px;
+	height: 530px;
 	background: image_url('photography.png');
+	background-attachment: fixed;
 }
 
 .kalipay-wallpaper{
 	display: none;
 	position: relative;
-	top: 60px;
+	top: 120px;
 }
 
 footer{
+	margin-top: 50px;
 	height: 200px;
 	border-top: 2px solid #b8ceb7;
 }
@@ -135,4 +140,44 @@ footer{
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-position: center center;	
+}
+
+#admin-wrapper {
+	background: image_url('photography.png');
+	background-attachment: fixed;
+}
+
+.inline-element {
+	display: inline-block;
+}
+
+textarea {
+	border-radius: 5px;
+	border: 2px solid gray !important; 
+	resize: none;
+	width: 80%;
+	height: 240px;
+}
+
+#admin-hr {
+	width: 100%;
+	background: black;
+	height: 2px;
+}
+
+#admin-nav {
+	background: black;
+	position: fixed;
+}
+
+.admin-left-padding {
+	padding-left: 30px;
+}
+
+.admin-editor {
+	margin: 30px;
+}
+
+.form-control {
+	width: 30% !important;
 }

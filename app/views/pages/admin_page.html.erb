@@ -1,0 +1,50 @@
+<div id="admin-wrapper" class="container-fluid">
+	<div class="row">
+		<div class="col-md-4" id="admin-nav">
+
+		</div>
+		<aside class="col-md-offset-4 col-md-8">
+			<section class="row admin-editor">
+				<h2>Edit main contents ...</h2>
+				<%= form_for @content, url: admin_path do |content| %>
+
+						<div class="form-group inline-element">
+							<label>Site Name:</label> <br />
+							<%= content.text_field :site_name %>
+						</div>
+						<div class="form-group inline-element admin-left-padding">
+							<label>Contact email:</label> <br />
+							<%= content.email_field :owner_email %>
+						</div>
+						<div class="form-group inline-element admin-left-padding">
+							<label>Contact number:</label> <br />
+							<%= content.text_field :contact_number %>
+						</div>
+						<div class="form-group">
+							<label>About section (text-content)</label>	<br />
+							<%= content.text_area :text_content_main %>
+						</div>
+
+
+					<div class="form-group">
+						<label>Article heading</label> <br />	
+						<%= content.text_field :heading, class:"form-control" %>
+					</div>
+					<div class="form-group">
+						<label>Brief intro for article section</label> <br />	
+						<%= content.text_area :welcome_text %>
+					</div>
+
+
+					<div class="form-group">
+						<%= content.submit "Update", class:"btn btn-primary"%>		
+					</div>				
+				<% end %>
+			</section>
+			<hr id="admin-hr"/>	
+			<section class="row admin-editor" id="article-create-wrapper">
+				<%= render "shared/form" %>					
+			</section>
+		</aside>
+	</div>	
+</div>			

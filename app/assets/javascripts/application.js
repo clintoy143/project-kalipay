@@ -34,3 +34,10 @@ $(document).ready(function(){
 
 	});
 });
+
+//full screen div height
+
+$(document).ready(function(){
+	var winHeight = $(window).height();
+	$("#admin-nav").css("height", winHeight);
+});

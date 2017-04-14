@@ -1,24 +1,5 @@
 <!-- Start Navigation Bar, insert logo at brand -->
-<nav class="navbar navbar-default navbar-fixed-top" id="nav">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#"><%= @content.site_name %></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Campaigns</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Articles</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+<%= render 'shared/nav' %>
 <!-- End -->
 
             <!--    Begin Capture Screen       -->
@@ -66,8 +47,14 @@
 
 <!-- About Section -->
 
-<section class="row"> 
-  
+<section class="container" id="about-wrapper">
+  <div class="row" id="kalipay-about">
+    <div class="col-md-offset-2 col-md-8">
+      <h2>About Project Kalipay</h2>
+      <p><%= @content.text_content_main %></p>
+    </div>
+  </div> 
+    
 </section>
 
 <!-- End about -->

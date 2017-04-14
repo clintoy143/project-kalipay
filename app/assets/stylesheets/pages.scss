@@ -142,6 +142,11 @@ footer{
 	background-position: center center;	
 }
 
+#kalipay-about{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
 #admin-wrapper {
 	background: image_url('photography.png');
 	background-attachment: fixed;
@@ -168,6 +173,29 @@ textarea {
 #admin-nav {
 	background: black;
 	position: fixed;
+	color: #888889;
+}
+
+#admin-nav>h1 {
+	color: #efefef; 
+}
+
+#admin-badge {
+	margin-top: 70px;
+}
+
+#admin-footer {
+	border-top: 1px solid #efdede;
+	height: 50px;
+}
+
+.admin-footer-wrapper {
+	margin-top: 20px;
+}
+
+#lastnote {
+	font-style: italic;
+	color: #828282;
 }
 
 .admin-left-padding {
@@ -180,4 +208,9 @@ textarea {
 
 .form-control {
 	width: 30% !important;
+}
+
+.log-out-btn {
+	position: absolute;
+	bottom: 10px;
 }

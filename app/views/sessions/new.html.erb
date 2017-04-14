@@ -1,0 +1,22 @@
+<div class="container-fluid">
+	<section class="row" >
+		<div class="col-md-offset-3 col-md-6">
+			<div class="text-left">
+				<h1><small>Login</small> <br />Project Kalipay Admin</h1>
+					<%= form_tag '/project_kalipay_admin_auth' do  %>
+						<div class="form-group">
+							<label>Name</label><br />
+							<%= text_field_tag :name %>
+						</div>
+						<div class="form-group">
+							<label>Password</label><br />
+							<%= password_field_tag :password %>
+						</div>
+						<div class="form-group">
+							<%= submit_tag "Submit", class:"btn btn-success"%>
+						</div>
+					<% end %>
+			</div>		
+		</div>		
+	</section>		
+</div>

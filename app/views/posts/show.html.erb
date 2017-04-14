@@ -4,7 +4,9 @@
 			<h1><%= @post.heading %></h1>
 			<p><%= @post.content %></p>
 			<%= link_to "Go back ...", root_path %>
-			<%= link_to "delete post",  admin_post_path(:id => @post), class:"btn btn-warning", method: :delete, data: { confirm: 'Are you sure?'} %>
+			<% if current_user %>	
+				<%= link_to "delete post",  admin_post_path(:id => @post), class:"btn btn-warning", method: :delete, data: { confirm: 'Are you sure?'} %>
+			<% end %>	
 		</div>	
 	</div>	
 </div>

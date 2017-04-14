@@ -6,7 +6,9 @@
 				<p><%= post.content %></p>
 			</article>	
 			<%= link_to "read more . . .", article_path(:id=> post)%>
-			<%= link_to "delete post",  admin_post_path(:id => post), class:"btn btn-warning", method: :delete, data: { confirm: 'Are you sure?'} %>
+			<% if current_user %>
+				<%= link_to "delete post",  admin_post_path(:id => post), class:"btn btn-warning", method: :delete, data: { confirm: 'Are you sure?'} %>
+			<% end %>	
 		</div>
 	<%end%>
 </div>

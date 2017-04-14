@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  
+  before_action :authorize, only: [:create, :delete]
   def show
   	@post = Post.find(params[:id])
   end

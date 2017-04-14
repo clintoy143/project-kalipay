@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+	before_filter :authorize, only: [:admin_page, :update_content]
+
 
 	def home
 		@content = Content.find(1)

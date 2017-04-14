@@ -27,10 +27,20 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 
 		var h = $(window).scrollTop();
+		var c = 10/h;
 
 		if(h > 10){
-			$("#nav").addClass('nav-anim');
+			$("#nav").addClass('nav-anim'); 
+			$(".kalipay-wallpaper").css({"padding-top": h, "opacity": c});
+		} else {
+			$(".kalipay-wallpaper").css({"opacity": "1"});
 		}
+
+		if (h > 300){
+			$(".kalipay-wallpaper").css({"opacity": "0"});
+
+		}
+
 
 	});
 });

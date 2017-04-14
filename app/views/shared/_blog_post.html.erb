@@ -1,14 +1,19 @@
 <div id="blog-post-container">
 	<% @post.each do |post| %>
 		<div class="col-md-4">
-			<article id="post">
-				<h2><%= post.heading %></h2>
-				<p><%= post.content %></p>
-			</article>	
-			<%= link_to "read more . . .", article_path(:id=> post)%>
-			<% if current_user %>
-				<%= link_to "delete post",  admin_post_path(:id => post), class:"btn btn-warning", method: :delete, data: { confirm: 'Are you sure?'} %>
-			<% end %>	
+			<div class="thumbnail">
+				<%= image_tag post.image_url.to_s, class:"img-responsive" %>
+				<div class="caption">
+					<article id="post">
+						<h2><%= post.heading %></h2>
+						<p><%= post.content %></p>
+					</article>	
+					<%= link_to "read more . . .", article_path(:id=> post)%>
+					<% if current_user %>
+						<%= link_to "delete post",  admin_post_path(:id => post), class:"btn btn-warning", method: :delete, data: { confirm: 'Are you sure?'} %>
+					<% end %>
+				</div>	
+			</div>		
 		</div>
 	<%end%>
 </div>

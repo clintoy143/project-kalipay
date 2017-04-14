@@ -1,6 +1,9 @@
-<div class="container">
+<div class="container" id="show-post">
 	<div class="row">
-		<div class="col-md-offset-2 col-md-8">	
+		<div class="col-md-offset-2 col-md-8">
+			<div class="row">
+				<%= image_tag @post.image_url.to_s, class:"img-responsive img-post" %>
+			</div>	
 			<h1><%= @post.heading %></h1>
 			<p><%= @post.content %></p>
 			<%= link_to "Go back ...", root_path %>

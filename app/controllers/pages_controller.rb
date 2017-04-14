@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 	def admin_page
 		@content = Content.find(1)
 		@post = Post.new
+		@post_list = Post.all
 	end
 
 	def update_content

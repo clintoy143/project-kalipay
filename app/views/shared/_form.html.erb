@@ -1,6 +1,6 @@
 <section id="article-create">
 	<h2>Create new article ...</h2>
-	<%= form_for @post, url: admin_post_path do |post| %>
+	<%= form_for @post, url: admin_post_path, :html => { :multipart => true } do |post| %>
 		<div class="form-group">
 			<label>Author</label> <br />
 			<%= post.text_field :author, class:"form-control", :value=>"Kalipay" %>
@@ -9,6 +9,14 @@
 			<label>Title</label> <br />
 			<%= post.text_field :heading, class:"form-control" %>
 		</div>
+		<div class="form-group">
+			<label>Upload Image</label> <br />
+			<%= post.file_field :image%>
+		</div>
+		<div class="form-group">
+			<%= post.label :remote_image_url, "or Paste image URL" %> <br />
+			<%= post.text_field :remote_image_url%>
+		</div>				
 		<div class="form-group">
 			<label>Content</label>	<br />
 			<%= post.text_area :content %>

@@ -2,6 +2,13 @@
 <%= render 'shared/nav' %>
 <!-- End -->
 
+<!-- Admin Panel Link if Log-in as admin -->
+<div id="admin-panel-link">
+  <% if current_user %>
+    <%= link_to "Go to Admin Panel", admin_page_path, class:"btn btn-primary"%>
+  <% end %> 
+</div>  
+
             <!--    Begin Capture Screen       -->
 <div id="capture-wrapper">
   <div class="container-fluid" id="kalipay-capture">
@@ -14,7 +21,7 @@
 </div>
 
 <!--   Picture Collage for Campaigns Done   -->
-<section class="container-fluid">
+<section class="container-fluid" id="collage">
       <div class="row kalipay-div-1">
         <div class="col-md-6" >
         </div>      
@@ -47,11 +54,20 @@
 
 <!-- About Section -->
 
-<section class="container" id="about-wrapper">
-  <div class="row" id="kalipay-about">
-    <div class="col-md-offset-2 col-md-8">
-      <h2>About Project Kalipay</h2>
-      <p><%= @content.text_content_main %></p>
+<section class="container-fluid" id="about-wrapper">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-2">
+      <div id="kalipay-about">  
+        <h2><small>about</small><br /> Project Kalipay</h2>
+      </div>  
+    </div>
+    
+    <div class="col-md-7" id="about-content">
+      <div class="row">
+        <div class="col-md-6">    
+          <p style="color: #f4fffa !important;"><%= @content.text_content_main %></p>
+        </div>  
+      </div>  
     </div>
   </div> 
     
@@ -63,7 +79,20 @@
 <!-- articles listing -->
 
 <section class="container">
-  <%= render "shared/blog_post.html.erb" %>
+  <div class="row" id="article-intro">
+    <h2><big>Read our articles</big></h2>   
+  </div>
+  <div class="row">
+        <%= render "shared/blog_post.html.erb" %>
+  </div>    
 </section>
 
 <%= render "shared/footer" %>
+
+
+<!-- 
+
+      CREATE ABOUT SECTION LAYOUT AND SOCIAL MEDIA LINKS
+      CREATE LISTINGS FOR DELETE @ ADMIN PANEL
+
+-->

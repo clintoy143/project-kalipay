@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authorize, only: [:create, :delete]
+  before_action :find_post, only: [:show, :delete, :update_article]
   def show
-  	@post = Post.find(params[:id])
   end
 
   def create
@@ -12,13 +12,21 @@ class PostsController < ApplicationController
   end
 
   def delete
-    @post = Post.find(params[:id])
     @post.destroy
 
     redirect_to admin_page_path
   end
 
+  def update_article
+    if @post.update(post_params)
+      redirect_to admin_page_path
+    end
+  end
+
   private 
+    def find_post
+      @post = Post.find(params[:id])
+    end
 
     def post_params
      params.require(:post).permit(:content, :heading, :author, :post, :image)

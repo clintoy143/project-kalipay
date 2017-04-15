@@ -51,3 +51,7 @@ $(document).ready(function(){
 	var winHeight = $(window).height();
 	$("#admin-nav").css("height", winHeight);
 });
+
+//ajax the div admin
+
+   

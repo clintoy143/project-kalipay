@@ -47,9 +47,24 @@
 					</div>				
 				<% end %>
 			</section>
-			<hr id="admin-hr"/>	
+			<hr class="admin-hr"/>	
 			<section class="row admin-editor" id="article-create-wrapper">
 				<%= render "shared/form" %>					
+			</section>
+			<hr class="admin-hr"/>
+			<section class="row admin-editor" id="article-edit">
+				<h2>Edit or update your published articles here ...</h2>
+				<br />
+				<div id="article-list-wrapper">
+					<% @post_list.each do |post| %>
+						<div class="col-md-3">
+							<h4><%= post.heading  %></h4>
+							<%= post.updated_at.strftime("%H:%M:%S - %b %d, %Y") %><br /> 
+							<%= link_to "View", article_path(:id => post), class:"btn btn-success"%>
+							<%= link_to "Del",  admin_post_path(:id => post), class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?'} %>
+						</div>	
+					<% end %>
+				</div>
 			</section>
 			<section id="admin-footer">
 				<div class="admin-footer-wrapper">

@@ -80,7 +80,7 @@
 
 <section class="container">
   <div class="row" id="article-intro">
-    <h2><big>Read our articles</big></h2>   
+    <h2><big><%= @content.heading %></big></h2><%= @content.welcome_text %>   
   </div>
   <div class="row">
         <%= render "shared/blog_post.html.erb" %>

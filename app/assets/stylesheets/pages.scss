@@ -55,9 +55,13 @@ footer{
 	border-top: 2px solid #b8ceb7;
 }
 
+footer {
+	background: image_url('weather.png');
+}
 
 #footer-wrapper {
 	margin-top: 40px;
+
 }
 
 .footer-list>li{
@@ -167,6 +171,13 @@ footer{
 	background: #23af6e	;
 }
 
+#article-intro {
+	padding: 20px;
+	margin-top: 10px;
+	margin-bottom: 30px; 
+}
+
+
 
 #admin-wrapper {
 	background: image_url('photography.png');
@@ -235,3 +246,4 @@ textarea {
 	position: absolute;
 	bottom: 10px;
 }
+

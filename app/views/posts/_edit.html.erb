@@ -1,6 +1,7 @@
 <section id="article-edit">
 	<h2>Edit article ...</h2>
 	<%= form_for @post, url: admin_update_post_path, :html => { :multipart => true } do |post| %>
+		<%= post.hidden_field :id %>
 		<div class="form-group">
 			<label>Author</label> <br />
 			<%= post.text_field :author, class:"form-control", :value=>"Kalipay" %>
@@ -22,7 +23,7 @@
 			<%= post.text_area :content %>
 		</div>
 		<div class="form-group">
-			<%= post.submit "Create article ...", class:"btn btn-primary"  %>
+			<%= post.submit "Update article ...", class:"btn btn-primary"  %>
 		</div>	
 	<% end %>
 </section>

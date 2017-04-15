@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	get "post_edit" => "posts#edit"
 	put "/admin/update_post" => 'posts#update_article'
 	patch "/admin/update_post" => 'posts#update_article'
 	post '/project_kalipay_admin_auth' => 'sessions#create'

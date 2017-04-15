@@ -59,7 +59,8 @@
 					<% @post_list.each do |post| %>
 						<div class="col-md-3">
 							<h4><%= post.heading  %></h4>
-							<%= post.updated_at.strftime("%H:%M:%S - %b %d, %Y") %><br /> 
+							<%= post.updated_at.strftime("%H:%M:%S - %b %d, %Y") %><br />
+							<%= link_to "Edit", post_edit_path(:id => post), class:"btn btn-primary", remote: true%> 
 							<%= link_to "View", article_path(:id => post), class:"btn btn-success"%>
 							<%= link_to "Del",  admin_post_path(:id => post), class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?'} %>
 						</div>	

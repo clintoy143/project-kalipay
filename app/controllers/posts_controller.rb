@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   before_action :authorize, only: [:create, :delete]
-  before_action :find_post, only: [:show, :delete, :update_article]
+  before_action :find_post, only: [:show, :delete, :edit]
   def show
+    @content = Content.find(1)
   end
 
   def create
@@ -11,6 +12,9 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def delete
     @post.destroy
 
@@ -18,8 +22,9 @@ class PostsController < ApplicationController
   end
 
   def update_article
+    @post = Post.find(params[:post][:id])
     if @post.update(post_params)
-      redirect_to admin_page_path
+      redirect_to root_path
     end
   end
 

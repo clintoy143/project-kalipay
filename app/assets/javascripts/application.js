@@ -20,7 +20,7 @@
 $(document).ready(function(){
 	$(".kalipay-wallpaper").delay(500).fadeIn(1000);
 	if ($(window).width() < 1280 ) {
-		$("#collage").remove();
+		$("#collage, #campaigns").remove();
 	} 
 });
 

@@ -88,7 +88,9 @@
     <%= render "shared/blog_post.html.erb" %>
   </div>
   <div id="list-link" class="text-center">
+  <% if @posts.all.count > 3 %>
     <%= link_to "View all articles", articles_path, class:"btn btn-primary btn-lg"%>
+    <% end %>
   </div>
 </section>
 

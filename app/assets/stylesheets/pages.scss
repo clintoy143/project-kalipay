@@ -43,6 +43,20 @@ nav a {
 	background-attachment: fixed;
 }
 
+@media screen and (max-width: 650px) {
+		#capture-wrapper{
+		border-bottom: 1px solid #caf4c8;
+		height: 330px;
+	}
+
+
+	#kalipay-capture {
+		height: 330px;
+		background: image_url('photography.png');
+		background-attachment: fixed;
+	}
+}
+
 .kalipay-wallpaper{
 	display: none;
 	position: relative;
@@ -78,8 +92,8 @@ footer {
 	height: inherit;
 	background: image_url("image_mason/kalipay-christmas.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-position: center center;
+	background-size: cover;
+	background-position: center center; 
 }
 
 .kalipay-div-2, .kalipay-div-3{
@@ -91,7 +105,7 @@ footer {
 	height: inherit;
 	background: image_url("image_mason/kalipay-daghan.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center center;
 	border-bottom: 1px solid white;	
 }
@@ -100,7 +114,7 @@ footer {
 	height: inherit;
 	background: image_url("image_mason/kalipay-crew.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center center;
 	border-bottom: 1px solid white;	
 }
@@ -109,7 +123,7 @@ footer {
 	height: inherit;
 	background: image_url("image_mason/kalipay-claire-jolu.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center center;	
 }
 
@@ -117,7 +131,7 @@ footer {
 	height: inherit;
 	background: image_url("image_mason/kalipay-boys.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center center;	
 }
 
@@ -129,7 +143,7 @@ footer {
 	height: inherit;
 	background: image_url("image_mason/kalipay-bata.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center center;	
 }
 
@@ -137,7 +151,7 @@ footer {
 	height: inherit;
 	background: image_url("image_mason/kalipay-xmas.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center center;
 	border-right: 1px solid white;		
 }
@@ -146,7 +160,7 @@ footer {
 	height: inherit;
 	background: image_url("image_mason/kalipay-tago.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center center;
 	border-left: 1px solid white;		
 }
@@ -155,7 +169,7 @@ footer {
 	height: inherit;
 	background: image_url("image_mason/kalipay-dodong.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center center;	
 }
 
@@ -177,6 +191,9 @@ footer {
 	margin-bottom: 30px; 
 }
 
+#about-text {
+	padding-left: 40px;
+}
 
 
 #admin-wrapper {

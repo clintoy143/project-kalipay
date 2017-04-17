@@ -1,0 +1,11 @@
+<section class="container">
+  <div class="row" id="article-intro">
+    <h2><big><%= @content.heading %></big></h2><%= @content.welcome_text %>   
+  </div>
+  <div class="row" id="my-posts">
+    <%= render "shared/blog_post.html.erb" %>
+  </div>
+  <%= will_paginate @posts %>
+</section>
+
+<%= render "shared/footer" %>

@@ -19,6 +19,9 @@
 //FadeIn effect for capture screen
 $(document).ready(function(){
 	$(".kalipay-wallpaper").delay(500).fadeIn(1000);
+	if ($(window).width() < 1280 ) {
+		$("#collage").remove();
+	} 
 });
 
 //nav-bar effects
@@ -28,6 +31,7 @@ $(document).ready(function(){
 
 		var h = $(window).scrollTop();
 		var c = 10/h;
+		var x = $("#collage").offset();
 
 		if(h > 10){
 			$("#nav").addClass('nav-anim'); 
@@ -38,9 +42,7 @@ $(document).ready(function(){
 
 		if (h > 300){
 			$(".kalipay-wallpaper").css({"opacity": "0"});
-
 		}
-
 
 	});
 });
@@ -54,4 +56,3 @@ $(document).ready(function(){
 
 //ajax the div admin
 
-   

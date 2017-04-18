@@ -1,3 +1,4 @@
+	<%= render "shared/responsive_admin_nav" %>
 <div id="admin-wrapper" class="container-fluid">
 	<div class="row">
 		<div class="col-md-4" id="admin-nav">
@@ -9,7 +10,7 @@
 				<%= link_to "Log-out", logout_path, class:"btn btn-danger" %>
 			</div>	
 		</div>
-		<aside class="col-md-offset-4 col-md-8">
+		<aside class="col-md-offset-4 col-md-8" id="editor">
 			<section class="row admin-editor">
 				<h2>Edit main contents ...</h2>
 				<%= form_for @content, url: admin_path do |content| %>

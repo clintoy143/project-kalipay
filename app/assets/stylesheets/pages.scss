@@ -58,14 +58,14 @@ nav a {
 }
 
 .kalipay-wallpaper{
-	display: none;
+	display: inline-block;
 	position: relative;
 	top: 120px;
 }
 
 footer{
 	margin-top: 50px;
-	height: 200px;
+	padding-bottom: 20px;
 	border-top: 2px solid #b8ceb7;
 }
 
@@ -219,6 +219,10 @@ textarea {
 	width: 100%;
 	background: #8e969e;
 	height: 2px;
+}
+
+#admin-responsive-nav {
+	display: none;
 }
 
 #admin-nav {

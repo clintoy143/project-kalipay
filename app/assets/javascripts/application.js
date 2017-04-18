@@ -21,6 +21,18 @@ $(document).ready(function(){
 	$(".kalipay-wallpaper").delay(500).fadeIn(1000);
 	if ($(window).width() < 1280 ) {
 		$("#collage, #campaigns").remove();
+		$("#admin-nav").remove();
+		$("#admin-responsive-nav").show();
+		$("#editor").css("margin-top", $("#admin-responsive-nav").height());
+	}
+
+	if ($(window).width() < 800 ) {
+		$("#admin-responsive-nav>div:nth-child(2)").removeClass("text-right");
+		$(".form-control").removeClass("form-control")
+	}
+
+	if ($(window).width() < 500 || $(window).width() < 720 ) {
+		$(".admin-left-padding").removeClass("admin-left-padding");
 	} 
 });
 

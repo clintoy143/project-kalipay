@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#"><%= @content.site_name %></a>
+      <%= link_to @content.site_name, "#capture-wrapper", class:"navbar-brand" %>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -22,7 +22,7 @@
  
   $(document).ready(function(){
     // Add smooth scrolling to all links in navbar + footer link
-    $(".navbar a").on('click', function(event) {
+    $(".navbar a, .navbar-brand").on('click', function(event) {
   
      // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {

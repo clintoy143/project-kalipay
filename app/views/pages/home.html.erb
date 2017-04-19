@@ -1,98 +1,100 @@
-<!-- Start Navigation Bar, insert logo at brand -->
-<%= render 'shared/nav' %>
-<!-- End -->
+<div id="homepage-wrapper">
+  <!-- Start Navigation Bar, insert logo at brand -->
+  <%= render 'shared/nav' %>
+  <!-- End -->
 
-<!-- Admin Panel Link if Log-in as admin -->
-<div id="admin-panel-link">
-  <% if current_user %>
-    <%= link_to "Go to Admin Panel", admin_page_path, class:"btn btn-primary"%>
-  <% end %> 
-</div>  
+  <!-- Admin Panel Link if Log-in as admin -->
+  <div id="admin-panel-link">
+    <% if current_user %>
+      <%= link_to "Go to Admin Panel", admin_page_url, class:"btn btn-primary"%>
+    <% end %> 
+  </div>  
 
-            <!--    Begin Capture Screen       -->
-<div id="capture-wrapper">
-  <div class="container-fluid" id="kalipay-capture">
-    <section class="container">
-    	<div class="row text-center">
-        <%= image_tag "kalipay-wallpaper.png", class:"kalipay-wallpaper img-responsive" %>
-    	</div>
-    </section>
+              <!--    Begin Capture Screen       -->
+  <div id="capture-wrapper">
+    <div class="container-fluid" id="kalipay-capture">
+      <section class="container">
+      	<div class="row text-center">
+          <%= image_tag "kalipay-wallpaper.png", class:"kalipay-wallpaper img-responsive" %>
+      	</div>
+      </section>
+    </div>
   </div>
-</div>
 
-<!--   Picture Collage for Campaigns Done   -->
-<section class="container-fluid" id="collage">
-      <div class="row kalipay-div-1">
-        <div class="col-md-6" >
-        </div>      
-        <div class="col-md-6">
-          <div class="row kalipay-div-2">
-            <div class="col-md-6">
+  <!--   Picture Collage for Campaigns Done   -->
+  <section class="container-fluid" id="collage">
+        <div class="row kalipay-div-1">
+          <div class="col-md-6" >
+          </div>      
+          <div class="col-md-6">
+            <div class="row kalipay-div-2">
+              <div class="col-md-6">
+              </div>
+              <div class="col-md-6">
+              </div>    
             </div>
-            <div class="col-md-6">
-            </div>    
-          </div>
-          <div class="row kalipay-div-3">
-            <div class="col-md-6">
+            <div class="row kalipay-div-3">
+              <div class="col-md-6">
+              </div>
+              <div class="col-md-6">
+              </div>    
             </div>
-            <div class="col-md-6">
-            </div>    
+          </div>  
+        </div>
+        <div class="row kalipay-div-4">
+          <div class="col-md-3">
+          </div>    
+          <div class="col-md-3">
           </div>
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+  </section>
+
+  <!-- About Section -->
+
+  <section class="container-fluid" id="about-wrapper">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-2">
+        <div id="kalipay-about">  
+          <h2><small>about</small><br /> Project Kalipay</h2>
         </div>  
       </div>
-      <div class="row kalipay-div-4">
-        <div class="col-md-3">
-        </div>    
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-3">
-        </div>
-      </div>
-</section>
-
-<!-- About Section -->
-
-<section class="container-fluid" id="about-wrapper">
-  <div class="row">
-    <div class="col-md-3 col-md-offset-2">
-      <div id="kalipay-about">  
-        <h2><small>about</small><br /> Project Kalipay</h2>
-      </div>  
-    </div>
-    
-    <div class="col-md-7" id="about-content">
-      <div class="row">
-        <div class="col-md-6">
-          <div id="about-text">
-            <p style="color: #f4fffa !important;"><%= @content.text_content_main %></p>
+      
+      <div class="col-md-7" id="about-content">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="about-text">
+              <p style="color: #f4fffa !important;"><%= @content.text_content_main %></p>
+            </div>  
           </div>  
         </div>  
-      </div>  
+      </div>
+    </div> 
+      
+  </section>
+
+  <!-- End about -->
+
+
+  <!-- articles listing -->
+
+  <section class="container" id="article-section">
+    <div class="row" id="article-intro">
+      <h2><big><%= @content.heading %></big></h2><%= @content.welcome_text %>   
     </div>
-  </div> 
-    
-</section>
+    <div class="row" id="my-posts">
+      <%= render "shared/blog_post.html.erb" %>
+    </div>
+    <div id="list-link" class="text-center">
+    <% if @posts.all.count > 3 %>
+      <%= link_to "View all articles", articles_path, class:"btn btn-primary btn-lg"%>
+      <% end %>
+    </div>
+  </section>
 
-<!-- End about -->
+  <%= render "shared/footer" %>
 
-
-<!-- articles listing -->
-
-<section class="container" id="article-section">
-  <div class="row" id="article-intro">
-    <h2><big><%= @content.heading %></big></h2><%= @content.welcome_text %>   
-  </div>
-  <div class="row" id="my-posts">
-    <%= render "shared/blog_post.html.erb" %>
-  </div>
-  <div id="list-link" class="text-center">
-  <% if @posts.all.count > 3 %>
-    <%= link_to "View all articles", articles_path, class:"btn btn-primary btn-lg"%>
-    <% end %>
-  </div>
-</section>
-
-<%= render "shared/footer" %>
-
+</div>

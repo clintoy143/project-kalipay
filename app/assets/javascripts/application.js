@@ -15,6 +15,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+function preload(){
+	$(window).load(function(){
+		$("#pre-loader").fadeOut("fast", function(){	
+			$("#homepage-wrapper").delay(500).fadeIn();
+		});
+	});
+};
+
+preload();	
+
 
 //FadeIn effect for capture screen
 $(document).ready(function(){

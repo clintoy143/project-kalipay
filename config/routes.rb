@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+#	get "/test" => "pages#test_page"
 	get "/articles" => "pages#article_list"
 	get "post_edit" => "posts#edit"
 	put "/admin/update_post" => 'posts#update_article'

@@ -2,6 +2,9 @@ class PagesController < ApplicationController
 	before_filter :authorize, only: [:admin_page, :update_content]
 	before_action :content_find
 
+	def test_page
+	end
+
 	def home
 		
 		@posts = Post.order("created_at DESC").page(params[:page]).per_page(3)

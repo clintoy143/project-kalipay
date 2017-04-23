@@ -191,6 +191,13 @@ footer {
 	background: #23af6e	;
 }
 
+.hoverThumb {
+	transition: 0.5s;
+	background: #3f3d3e;
+	color: white !important;
+	cursor: pointer;
+}
+
 #article-intro {
 	padding: 20px;
 	margin-top: 10px;
@@ -201,6 +208,9 @@ footer {
 	padding-left: 40px;
 }
 
+#about-p{
+	visibility: hidden;
+}
 
 #admin-wrapper {
 	background: image_url('photography.png');

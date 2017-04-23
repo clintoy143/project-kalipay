@@ -274,3 +274,11 @@ textarea {
 	bottom: 10px;
 }
 
+#spacer-parallax {
+	height: 400px;
+	background: image_url('image_mason/spacer.jpg');
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}

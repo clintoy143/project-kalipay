@@ -41,7 +41,8 @@ $(document).ready(function(){
 
 	if ($(window).width() < 500 || $(window).width() < 720 ) {
 		$(".admin-left-padding").removeClass("admin-left-padding");
-	} 
+	}
+
 });
 
 //nav-bar effects

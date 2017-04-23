@@ -43,6 +43,13 @@ $(document).ready(function(){
 		$(".admin-left-padding").removeClass("admin-left-padding");
 	}
 
+	$(".thumbnail, .caption").hover(function(){
+		$(this).addClass("hoverThumb");
+	},
+	function(){
+		$(this).removeClass("hoverThumb");
+	});	
+
 });
 
 //nav-bar effects
@@ -53,6 +60,7 @@ $(document).ready(function(){
 		var h = $(window).scrollTop();
 		var c = 10/h;
 		var x = $("#collage").offset();
+		var a = $("#about-text").offset().top;
 
 		if(h > 10){
 			$("#nav").addClass('nav-anim'); 
@@ -64,7 +72,13 @@ $(document).ready(function(){
 		if (h > 300){
 			$(".kalipay-wallpaper").css({"opacity": "0"});
 		}
-
+		if (h > (a - 500)) {
+			var count = 1;
+			if (count <= 1) {
+				$("#about-p").addClass("slide");
+				count ++;
+			}
+		}
 	});
 });
 

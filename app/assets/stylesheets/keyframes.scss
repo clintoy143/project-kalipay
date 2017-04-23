@@ -7,3 +7,33 @@
 	from {background-color: rgba(17, 198, 110, 0); height: 90px;}
 	to {background-color: rgba(17, 198, 110, 1); height: 60px;}
 }
+
+@keyframes slide-left {
+	0% {opacity: 0;}
+	25% {opacity: 0.25;}
+	50% {opacity: 0.5;}
+	75% {opacity: 0.75;}
+	100% {opacity: 1;}
+}
+
+@keyframes slide {
+	from{ margin-left: 80px;opacity: 0; visibility: hidden;}
+	to{margin-left: 00px;opacity: 1; visibility: visible;}
+}
+
+@-webkit-keyframes slide-left {
+	from{text-align: right; }
+	to {text-align: left; }
+}
+
+
+.test {
+	visibility: hidden;
+
+}
+
+.slide {
+	visibility: visible !important;
+	animation-name: slide;
+	animation-duration: 1.5s;
+}

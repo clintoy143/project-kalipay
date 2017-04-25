@@ -35,6 +35,29 @@ nav a {
     height: 60px;
 }
 
+#nav-list {
+	display: inline-block;
+	text-align: center;
+	width: 80%;
+	padding-left: 32%;
+	margin-top: 5px;
+	}
+
+#nav-list>li:hover {
+	transition: 0.5s;
+	background: #14e877;
+}
+
+
+#nav-list>li:first-child {
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#nav-list>li:last-child{
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
 #capture-wrapper{
 	border-bottom: 1px solid #caf4c8;
 	height: 530px;

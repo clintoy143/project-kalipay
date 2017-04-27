@@ -25,7 +25,7 @@ preload();
 
 
 //FadeIn effect for capture screen
-$(document).ready(function(){
+$(document).on('page:change', function(){
 	$(".kalipay-wallpaper").delay(500).fadeIn(1000);
 	if ($(window).width() < 1280 ) {
 		$("#collage, #campaigns").remove();
@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 //nav-bar effects
 
-$(document).ready(function(){
+$(document).on('page:change', function(){
 	$(window).scroll(function(){
 
 		var h = $(window).scrollTop();
@@ -84,7 +84,7 @@ $(document).ready(function(){
 
 //full screen div height
 
-$(document).ready(function(){
+$(document).on('page:change', function(){
 	var winHeight = $(window).height();
 	$("#admin-nav").css("height", winHeight);
 });

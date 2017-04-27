@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery.turbolinks
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
 function preload(){
@@ -26,7 +26,7 @@ preload();
 
 
 //FadeIn effect for capture screen
-$(document).on('page:change', function(){
+$(document).on('turbolinks:load', function(){
 	$(".kalipay-wallpaper").delay(500).fadeIn(1000);
 	if ($(window).width() < 1280 ) {
 		$("#collage, #campaigns").remove();
@@ -55,7 +55,7 @@ $(document).on('page:change', function(){
 
 //nav-bar effects
 
-$(document).on('page:change', function(){
+$(document).on('turbolinks:load', function(){
 	$(window).scroll(function(){
 
 		var h = $(window).scrollTop();
@@ -85,7 +85,7 @@ $(document).on('page:change', function(){
 
 //full screen div height
 
-$(document).on('page:change', function(){
+$(document).on('turbolinks:load', function(){
 	var winHeight = $(window).height();
 	$("#admin-nav").css("height", winHeight);
 });

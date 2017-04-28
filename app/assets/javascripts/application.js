@@ -67,6 +67,7 @@ $(document).on('turbolinks:load', function(){
 		
 	if ($(window).width() < 1280 ) {
 		$("#collage, #campaigns").remove();
+		$("#mobile-pics").fadeIn();
 		$("#admin-nav").remove();
 		$("#admin-responsive-nav").show();
 		$("#editor").css("margin-top", $("#admin-responsive-nav").height());

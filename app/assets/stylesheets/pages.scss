@@ -72,6 +72,7 @@ nav a {
 }
 
 @media screen and (max-width: 550px) {
+
 	.collapse{
 		background: rgba(17, 198, 110, 1) !important;
 	}
@@ -87,11 +88,17 @@ nav a {
 }
 
 @media screen and (max-width: 650px) {
-		#capture-wrapper{
+	#capture-wrapper{
 		border-bottom: 1px solid #caf4c8;
 		height: 330px;
+		margin-bottom: 40px;
 	}
 
+	#spacer-parallax{
+		height: 150px !important;
+		background-size: 150% 100% !important;
+		background-position: bottom !important;
+	}
 
 	#kalipay-capture {
 		height: 330px;
@@ -330,4 +337,16 @@ textarea {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+}
+
+.mobile-img {
+	max-width: 50%;
+}
+
+#mobile-pics{
+	display: none;
+}
+
+.height-mob {
+	height: 300px;
 }

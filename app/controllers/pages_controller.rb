@@ -5,6 +5,9 @@ class PagesController < ApplicationController
 	def test_page
 	end
 
+	def mobile_pics
+	end
+
 	def home
 		
 		@posts = Post.order("created_at DESC").page(params[:page]).per_page(3)

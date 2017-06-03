@@ -1,4 +1,5 @@
 <div class="container" id="show-post">
+
 	<div class="row">
 		<div class="col-md-offset-2 col-md-8">
 			<div class="row">
@@ -15,7 +16,9 @@
 
 			<% if current_user %>	
 				<%= link_to "delete post",  admin_post_path(:id => @post), class:"btn btn-warning", method: :delete, data: { confirm: 'Are you sure?'} %>
-			<% end %>	
+			<% end %>
+			<div class="fb-share-button" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.projectkalipay.com%2Farticle%3Fid%3D3&amp;src=sdkpreparse">Share</a>
+			</div>
 		</div>	
 	</div>	
 </div>

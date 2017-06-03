@@ -4,16 +4,17 @@
   		<div class="col-md-6">
 		    <ul class="footer-list">
 		    	<li><span style="font-weight: bold; letter-spacing: 2px;">&copy; 2017 Project Kalipay</span>, non-profit organization</li>
-		    	<li><a href="#about-wrapper" id="footer-about">About</a></li>
-		    	<li><a href="/articles">Articles</a></li>
+		    	<li><br />
+		    		<ul style="list-style-type: none;">
+				  		<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> &nbsp;<%= @content.owner_email %></li>
+				  		<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> &nbsp;<%= @content.contact_number %></li>
+		  			</ul>
+		    	</li>
 		  	</ul>
-		  	<ul style="list-style-type: none;">
-		  		<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <%= @content.owner_email %></li>
-		  		<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <%= @content.contact_number %></li>
-		  	</ul>
+
 	  	</div>
-	  	<div class="col-md-6" id="footer-links">
-	  		<a href="https://www.facebook.com/projectkalipay/?hc_ref=SEARCH&fref=nf"><%= image_tag "fb.png", class:""%></a>
+	  	<div class="col-md-6 " id="footer-links">
+	  		<div class="fb-page" data-href="https://www.facebook.com/projectkalipay/" data-tabs="timeline" data-width="520" data-height="90" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/projectkalipay/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/projectkalipay/">Project Kalipay</a></blockquote></div>
 	  	</div>
 	</div>  	
   </div>  

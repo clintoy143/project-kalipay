@@ -7,8 +7,8 @@
 					<article id="post">
 						<h2><%= post.heading %></h2>
 						<p><%= post.content %></p>
-					</article>	
-					<%= link_to "read more . . .", article_path(:id=> post), class:"btn btn-primary"%>
+					</article><br />	
+					<%= link_to "read more . . .", article_path(:id=> post), class:"btn btn-primary", style:"margin-top: 10px;"%>
 					<% if current_user %>
 						<%= link_to "delete post",  admin_post_path(:id => post), class:"btn btn-warning", method: :delete, data: { confirm: 'Are you sure?'} %>
 					<% end %>
